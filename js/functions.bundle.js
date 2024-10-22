@@ -693,6 +693,34 @@ function(e, t) {
         }
     }
       , i = {
+        onReady: function() {
+            function e() {
+                dataLayer.push(arguments)
+            }
+            fetch("switcher-html.html").then(e => e.text()).then(e => {
+                var t = document.createElement("div");
+                t.classList.add("cnvs-switcher-container"),
+                t.innerHTML = e,
+                c.elBody.appendChild(t),
+                o.runContainerModules(t),
+                o.loadJS({
+                    file: "js/cnvsswitcher.js",
+                    id: "cnvs-switcher-js"
+                })
+            }
+            ).catch(e => {
+                console.log(e),
+                console.log("Switcher Error!")
+            }
+            ),
+            o.loadJS({
+                file: "https://www.googletagmanager.com/gtag/js?id=G-HH0J5CE3B7",
+                id: "canvas-gtag-js"
+            }),
+            window.dataLayer = window.dataLayer || [],
+            e("js", new Date),
+            e("config", "G-HH0J5CE3B7")
+        },
         onLoad: function() {},
         onResize: function() {}
     }
