@@ -23010,12 +23010,19 @@ body:not(.has-plugin-html5video) .video-wrap video {
 }
 
 .portfolio {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
     transition: height .4s linear
 }
 
 .portfolio-item {
-    position: relative
+    position: relative;
+}
+@media (min-width: 768px) {
+    .portfolio-item {
+        flex: 1 0 30%; /* tres elementos por fila */
+    }
 }
 
 .portfolio-reveal .portfolio-item {
