@@ -35802,17 +35802,29 @@ body.dark {
     }
 
     .top-links-container {
-        flex-direction: column; /* Cambiar a columna en móvil */
+        flex-direction: row; /* Cambiar a columna en móvil */
         align-items: center; /* Centramos los enlaces */
+        justify-content: space-around; /* Para distribuir los enlaces de manera uniforme */
+        text-align: center;
+    }
+    }
+    #logo img {
+        width: 150px;
     }
 
     .header-misc {
-        flex-direction: column; /* Cambiamos a columna */
+        flex-direction: row; /* Cambiamos a columna */
         align-items: center; /* Centramos los elementos */
+    }
+    .header-extras {
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        text-align: center;
     }
 
     .menu-container {
-        flex-direction: column; /* Cambiar a columna en móvil */
+        flex-direction: row; /* Cambiar a columna en móvil */
         align-items: center; /* Centramos los enlaces */
     }
 
