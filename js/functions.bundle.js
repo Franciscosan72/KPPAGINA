@@ -4211,7 +4211,7 @@ function H(e) {
         a >= i.start && a <= i.end ? (e = a - i.start,
         t = a - i.offset,
         n = e / i.range.full * 100,
-        s = e / i.range.start,
+        s = (e / i.range.start),
         o = a > i.start + i.height && a < i.offset ? (s = 1,
         0) : a >= i.offset ? (s = 1,
         t / i.range.end) : 0,
