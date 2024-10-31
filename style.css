@@ -229,7 +229,9 @@ hr {
 .h2,h2 {
     font-size: calc(1.325rem + .9vw)
 }
-
+.section h2 {
+    margin-bottom: 5px; /* Espacio entre el título y el contenido */
+}
 @media(min-width: 1200px) {
     .h2,h2 {
         font-size:2rem
@@ -8504,7 +8506,7 @@ textarea.form-control-lg {
 }
 
 .mt-6 {
-    margin-top: 5rem!important
+    margin-top: 3rem!important
 }
 
 .mt-auto {
@@ -14945,8 +14947,8 @@ textarea.form-control-lg {
     --cnvs-margin-base: 3rem;
     --cnvs-margin-sm: 2rem;
     --cnvs-margin-lg: 5rem;
-    --cnvs-content-padding: 5rem;
-    --cnvs-section-margin: 4rem;
+    --cnvs-content-padding: 3rem;
+    --cnvs-section-margin: 2rem;
     --cnvs-section-padding: var(--cnvs-section-margin);
     --cnvs-col-padding: var(--cnvs-section-padding);
     --cnvs-box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -15267,7 +15269,8 @@ textarea.form-control-lg {
     width: 100%;
     margin: 0 auto;
     background-color: var(--cnvs-body-bg);
-    box-shadow: 0 0 10px rgba(0,0,0,.1)
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    margin-bottom: 40px
 }
 
 @media(min-width: 1200px) {
@@ -35738,6 +35741,8 @@ body.dark {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 2em;
+        padding-top: 0.01%;
+        text-align: center;
 }
 
 .software {
@@ -35835,4 +35840,16 @@ body.dark {
         width: 100%; /* Hacer el campo de búsqueda más ancho */
         margin-top: 10px; /* Añadir margen superior */
     }
+}
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 500px; /* Puedes ajustar el ancho según sea necesario */
+    margin: 0 auto; /* Centra la cuadrícula */
+}
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
